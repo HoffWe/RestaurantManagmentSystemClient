@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import {IngredientDto} from "./IngredientDto";
-import {IngredientApi} from "./IngredientApi";
+import {IngredientDto} from "../../models/api/IngredientDto";
+import {IngredientApi} from "../../api/IngredientApi";
 import {Table,Th,Td, TableCaption, TableContainer, Tbody, Thead, Tr} from "@chakra-ui/react";
 
 

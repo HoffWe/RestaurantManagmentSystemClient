@@ -1,5 +1,5 @@
-import {ingredientApi} from "./useAxios";
-import {IngredientDto} from "./IngredientDto";
+import {IngredientDto} from "../models/api/IngredientDto";
+import {ingredientApi} from "../hooks/useAxios";
 
 export class IngredientApi {
     static getIngredients = async () =>

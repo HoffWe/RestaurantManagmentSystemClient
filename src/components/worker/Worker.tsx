@@ -29,7 +29,7 @@ export const WorkerPage= () => {
             <WorkerPhoto src={worker?.photoUrl} alt="Worker's Photo" />
             <WorkerInfoContainer>
                 <WorkerBasicInfoContainer>
-                    <WorkerName>{`${worker?.firstName} ${worker?.lastName}`}</WorkerName>
+                    {/*<WorkerName>{`${worker?.firstName} ${worker?.lastName}`}</WorkerName>*/}
                     <WorkerPosition>{worker?.position}</WorkerPosition>
                 </WorkerBasicInfoContainer>
                 <WorkerBasicInfo>Date of Birth: {worker?.dateOfBirth.toDateString()}</WorkerBasicInfo>

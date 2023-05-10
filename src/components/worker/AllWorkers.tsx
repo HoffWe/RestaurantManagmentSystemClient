@@ -43,7 +43,7 @@ export const AllWorkers = () => {
                     <Tr key = {value.id}>
                     <Td>{value.photoUrl}</Td>
                     <Td>{value.name}  {value.lastName}</Td>
-                    <Td>{value.dateOfBirth}</Td>
+                    {/*<Td>{value.dateOfBirth}</Td>*/}
                     <Td>{value.position}</Td>
                     <Td>{value.salary}</Td>
                     </Tr>
