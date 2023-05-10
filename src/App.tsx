@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {AppRouter} from "./router/App.router";
-import {AllWorkers} from "./components/worker/AllWorkers";
 import {useAxios} from "./hooks/useAxios";
 
 function App() {
@@ -11,7 +9,7 @@ function App() {
   return (
 
     <div className="App">
-     <AllWorkers/>
+     <AppRouter/>
     </div>
   );
 }
