@@ -1,5 +1,5 @@
 export type WorkerDto = {
-    id: string;
+    id: number;
     photoUrl: string;
     name: string;
     lastName: string;

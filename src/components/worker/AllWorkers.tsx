@@ -12,6 +12,7 @@ import {
     TableCaption,
     TableContainer,
 } from '@chakra-ui/react'
+import {Link} from "react-router-dom";
 
 export const AllWorkers = () => {
     const [workers, setWorkers] = useState<WorkerDto[]>([]);
@@ -42,8 +43,8 @@ export const AllWorkers = () => {
                 return (
                     <Tr key = {value.id}>
                     <Td>{value.photoUrl}</Td>
-                    <Td>{value.name}  {value.lastName}</Td>
-                    {/*<Td>{value.dateOfBirth}</Td>*/}
+                        <Link to={`${value.id}`}><Td>{value.name}  {value.lastName}</Td></Link>
+                    <Td>{value.dateOfBirth}</Td>
                     <Td>{value.position}</Td>
                     <Td>{value.salary}</Td>
                     </Tr>

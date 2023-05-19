@@ -11,6 +11,7 @@ import {useEffect, useState} from "react";
 import {useParams } from "react-router-dom";
 
 import {WorkerApi} from "../../api/WorkerApi";
+import axios from "axios";
 
 export const WorkerPage= () => {
     const [worker, setWorker] = useState<WorkerDto>();
@@ -21,7 +22,7 @@ export const WorkerPage= () => {
     })
 
     const loadWorker = async () => {
-        const result = await WorkerApi.getWorkerById(id!);
+        const result = await axios.get(`http://localhost:8080/api/worker/${id}`);
         setWorker(result.data)
     }
     return (
@@ -29,7 +30,7 @@ export const WorkerPage= () => {
             <WorkerPhoto src={worker?.photoUrl} alt="Worker's Photo" />
             <WorkerInfoContainer>
                 <WorkerBasicInfoContainer>
-                    {/*<WorkerName>{`${worker?.firstName} ${worker?.lastName}`}</WorkerName>*/}
+                    <WorkerName>{`${worker?.name} ${worker?.lastName}`}</WorkerName>
                     <WorkerPosition>{worker?.position}</WorkerPosition>
                 </WorkerBasicInfoContainer>
                 <WorkerBasicInfo>Date of Birth: {worker?.dateOfBirth.toDateString()}</WorkerBasicInfo>
